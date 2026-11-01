@@ -116,7 +116,8 @@ export default function Page() {
       </section>
       <p className="mt-3 text-center text-xs text-muted">
         Output of <code className="font-mono">tests/live_sandbox_isolation.rs</code> through{" "}
-        <code className="font-mono">sandbox_core::run_sandbox</code>, run 2026-11-01. Not a mock.
+        <code className="font-mono">sandbox_core::run_sandbox</code>, run 2026-11-01. Not a mock. On main the
+        test stops at its first assertion, so the equal-history case only appears on the right.
       </p>
 
       <section className="mt-14 grid gap-8 md:grid-cols-[1fr_1.1fr]">

@@ -3,6 +3,7 @@ import { AFTER, BEFORE, MAIN_SHA } from "./runs";
 const ISSUE = "https://github.com/archestra-ai/archestra/issues/8662";
 const SRC = `https://github.com/archestra-ai/archestra/blob/${MAIN_SHA}/platform/archestra-rs/sandbox-core/src/backends/dagger.rs`;
 const BRANCH = "https://github.com/cherylaurelia/archestra/tree/fix/sandbox-cache-isolation";
+const REPO = "https://github.com/cherylaurelia/archestra-demo";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -195,7 +196,13 @@ export default function Page() {
           href={BRANCH}
           className="rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-primary-dark"
         >
-          View the branch
+          View the PR branch
+        </a>
+        <a
+          href={REPO}
+          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-semibold text-ink hover:bg-panel"
+        >
+          View the repo
         </a>
         <a
           href="/PR.md"

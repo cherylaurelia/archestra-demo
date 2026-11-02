@@ -7,7 +7,7 @@ content-addressed cache treated two sandboxes with equal history as the same com
 Reported with measurements by @kundeng: https://github.com/archestra-ai/archestra/issues/8662
 
 **Fix.** Root each sandbox's chain in `ARCHESTRA_SANDBOX_KEY=<sandbox id>`. Results stay per sandbox; a
-sandbox's own replay still hits its cached layers. Branch: https://github.com/cherylaurelia/archestra/tree/fix/sandbox-cache-isolation
+sandbox's own replay still hits its cached layers. Branch: https://github.com/archestra-ai/archestra/pull/10061
 (PR description in `public/PR.md`).
 
 **This page** shows the real output of the regression test `sandbox-core/tests/live_sandbox_isolation.rs`

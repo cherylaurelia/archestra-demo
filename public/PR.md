@@ -13,6 +13,8 @@ assertion `left != right` failed: sandbox b was served sandbox a's cached result
  right: "13:02:30.360330216"
 ```
 
+(Timestamps differ per run; the explainer page shows a separate run of the same test.)
+
 ## Change
 - `sandbox-core`: `RunSandboxInput` and `ReadArtifactInput` get an optional `sandboxKey`, validated at the boundary (1–128 bytes, `[A-Za-z0-9_-]`). `materialize` roots the chain in `keyed_base`, which sets `ARCHESTRA_SANDBOX_KEY=<key>` on the warm container before any replay step.
 - Env vars are part of every later exec's cache key, so:

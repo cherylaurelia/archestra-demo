@@ -20,6 +20,7 @@ function Terminal({ title, tone, runs }: { title: string; tone: "bad" | "good"; 
     tone === "bad"
       ? "bg-[#fef3f2] text-bad ring-[#fecdca]"
       : "bg-[#f0fdfa] text-good ring-[#99f6e4]";
+
   return (
     <figure className="overflow-hidden rounded-xl border border-line bg-white shadow-sm">
       <figcaption className="flex items-center justify-between border-b border-line bg-panel px-4 py-2.5">
@@ -51,6 +52,7 @@ function Chain({ keyed }: { keyed: boolean }) {
   const steps = keyed
     ? ["warm base", "ARCHESTRA_SANDBOX_KEY=<sandbox id>", "replayed commands…", "live command"]
     : ["warm base", "replayed commands…", "live command"];
+
   return (
     <ol className="flex flex-wrap items-center gap-2 font-mono text-[12px]">
       {steps.map((s, i) => (
